@@ -56,33 +56,36 @@ while True:
                     print(recycle)
                     print("Would you like to restore your\n1.All Data\n2.Specific_Data\n3.Exit")
                     m=int(input("Enter your choice between 1-3 : "))
-                    if m==3:
-                        print("Nothing is restored!")
-                        sys.exit()
-                    elif m==1:
-                        if recycle:
-                            data.extend(recycle)
-                            recycle.clear()
-                            print("Done! all data is restored")
-                        else:
-                            print("No data is present in bin to be restored!")
-                    elif m==2:
-                        if recycle:
-                            g=input("Enter data to get restored: ")
-                            if g in recycle:
-                                data.append(g)
-                                recycle.remove(g)
-                                print(f"{g} has been restored successfully!")
+                    if 0<m<=2:
+                        if m==3:
+                            print("Nothing is restored!")
+                            sys.exit()
+                        elif m==1:
+                            if recycle:
+                                data.extend(recycle)
+                                recycle.clear()
+                                print("Done! all data is restored")
                             else:
-                                print(f"{g} is not present in recycle bin,either it is deleted or was not present in bin")
-                        else:
-                            print("Nothing is present in the bin to get restored,first enter to get restored")
+                                print("No data is present in bin to be restored!")
+                        elif m==2:
+                            if recycle:
+                                g=input("Enter data to get restored: ")
+                                if g in recycle:
+                                    data.append(g)
+                                    recycle.remove(g)
+                                    print(f"{g} has been restored successfully!")
+                                else:
+                                    print(f"{g} is not present in recycle bin,either it is deleted or was not present in bin")
+                            else:
+                                print("Nothing is present in the bin to get restored,first enter to get restored")
+                    else:
+                        print("You are suppose to enter your your choice between 1-3!")
                 else:
                     print("Recycle is empty")
         else:
             print("Enter your choice between 1-5 to perform the operations!")
     except ValueError:
-        print("Only int values between 1-5 are accepted,strings are not accepted")
+        print("Only int values are accepted,strings are not accepted")
 
 
 

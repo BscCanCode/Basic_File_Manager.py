@@ -9,7 +9,7 @@
 ## About This Project
 A beginner's attempt at a file manager simulation using Python basics:
 
-- Lists for data storage
+- Lists for data and recycle bin storage
 - Loops for continuous operation
 - Conditionals for decision-making
 - Try-Except for error handling
@@ -20,7 +20,7 @@ A beginner's attempt at a file manager simulation using Python basics:
 ## Why I Built This
 - Wanted to create a practical app without tutorials, focusing on data management.
 - Practiced list operations, conditional logic, and basic error handling.
-- Aimed to simulate file storage, deletion, and recovery—still learning advanced features.
+- Aimed to simulate file storage, deletion, and recovery with a recycle bin—still learning advanced features.
 
 ---
 
@@ -34,9 +34,9 @@ A beginner's attempt at a file manager simulation using Python basics:
 |Feature|What It Does|
 |-------|------------|
 |Open App|Displays stored data if any|
-|Enter Data|Adds user input to storage|
+|Enter Data|Adds user input to storage (any format)|
 |Delete Data|Removes data with recycle bin option and clear all|
-|Recycle Bin|Shows deleted data, allows restore (all or specific)|
+|Recycle Bin|Shows deleted data, allows restore (all or specific) with sub-menu|
 |Exit|Closes the app|
 
 ## What can program do:
@@ -49,10 +49,14 @@ A beginner's attempt at a file manager simulation using Python basics:
 ## Sample Flow
 - Choose 2 → Enter "Note1" → "Note1 is added successfully..."
 - Choose 3 → Enter "Note1" → "Note1 got deleted..." → "yes" → Stored in recycle
-- Choose 4 → Choose 2 → Enter "Note1" → "Note1 has been restored..."
+- Choose 4 → Choose 1 → "Done! all data is restored"
 - Choose 5 → "Thank You for using our app..."
 
 ---
+
+## Known Issues
+- No validation for empty strings or special characters.
+- No handling for large data sets.
 
 ---
 
@@ -60,9 +64,10 @@ A beginner's attempt at a file manager simulation using Python basics:
 - [Sid.py] ([https://github.com/BscCanCode](https://github.com/BscCanCode))
 
 ## Development Notes
-- Self learning from youtube
+- Built via self-learning from YouTube.
 - Uses basic Python (lists, loops, conditionals, try-except).
-- This is raw—reflects my current skill level (beginner)
+- Highlights: Added recycle bin sub-menu with range check attempt (`0 < m <= 2`) to improve restore options. (This the update)
+- Current skill level: Beginner
 
 ---
 
@@ -73,4 +78,4 @@ A beginner's attempt at a file manager simulation using Python basics:
 ---
 
 ## Fun Fact
-- Took me one hour to write and half an hour fix errors
+- Took one hour to write and 30 minutes to analyze and rectify the errors
